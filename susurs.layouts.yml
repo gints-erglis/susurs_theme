@@ -1,0 +1,27 @@
+layout_twocol_70_30:
+  label: 'Two column 70/30'
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  path: templates/layouts/twocol_70_30
+  template: layout--twocol-70-30
+  category: 'Columns: 2'
+  library: susurs/layout_twocol_70_30
+  default_region: content
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+layout_grid_wrapper:
+  label: 'Grid'
+  path: templates/layouts/grid_wrapper
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  template: layout--grid-wrapper
+  category: 'Grid'
+  icon_map:
+    - [main]
+  regions:
+    main:
+      label: 'Grid wrapper'

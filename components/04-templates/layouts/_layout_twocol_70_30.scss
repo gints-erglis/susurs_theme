@@ -1,0 +1,8 @@
+.layout--twocol-70-30 .layout--inner {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+  @include large {
+    grid-template-columns: 66% 1fr;
+  }
+}

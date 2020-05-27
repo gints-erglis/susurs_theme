@@ -1,0 +1,39 @@
+.layout--grid-wrapper {
+  .layout__region--main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &.grid-2 {
+    .layout__region--main > div {
+      flex: 1 0 50%;
+    }
+  }
+  &.grid-3 {
+    .layout__region--main > div {
+      flex: 1 0 30%;
+    }
+  }
+  &.grid-4 {
+    .layout__region--main > div {
+      flex: 1 0 25%;
+    }
+  }
+  &.grid-space-small {
+    .layout__region--main {
+      margin: 0 -1rem;
+      > div {
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+      }
+    }
+  }
+  &.grid-space-big {
+    .layout__region--main {
+      margin: 0 -2rem;
+      > div {
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+      }
+    }
+  }
+}

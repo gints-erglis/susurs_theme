@@ -1,0 +1,91 @@
+layout_option_definitions:
+  layout_bg_color:
+    title: 'Background color'
+    description: 'The background color to use with this layout item.'
+    default: ''
+    plugin: layout_options_class_select  # A plugin that handles select form based class attributes.
+    multi: false  #select multiple options?
+    options:    # The select options shown
+      bg-info: 'Info'
+      bg-primary: 'Primary'
+      bg-secondary: 'Secondary'
+      bg-success: 'Success'
+      bg-white: 'White'
+      bg-transparent: 'Transparent'
+    layout: true  # allow this option to be using in the overall layout container
+    regions: true # allow this option to be used in any regions
+    weight: -100 #optional -  Define option order in configuration form.
+    allowed_regions: [content] #optional - Define specific regions that use this.
+
+  layout_grid:
+    title: 'Grid columns'
+    description: 'The count of grid elements in a row.'
+    default: ''
+    plugin: layout_options_class_select
+    multi: false
+    options:
+      grid-1: 'Grid 1'
+      grid-2: 'Grid 2'
+      grid-3: 'Grid 3'
+      grid-4: 'Grid 4'
+    layout: true
+    regions: true
+    weight: -100
+    allowed_regions: [content]
+
+  layout_grid_space:
+    title: 'Grid space'
+    description: 'The size of space between the items.'
+    default: ''
+    plugin: layout_options_class_select
+    multi: false
+    options:
+      grid-space-small: 'Small space'
+      grid-space-big: 'Big space'
+    layout: true
+    regions: true
+    weight: -100
+    allowed_regions: [content]
+
+  layout_design_classes:
+    title: 'Layout spaces'
+    description: 'The theme design classes to use with this layout item.'
+    default: ''
+    plugin: layout_options_class_checkboxes
+    inline: true
+    options:
+      layout--no-spacing: 'No Padding/Margin'
+      layout--narrow-spacing: 'Narrow spacing'
+      layout--large-spacing: 'Large spacing'
+      layout--full-width-background: 'Full Width Image'
+    layout: true
+    regions: true
+
+layout_options:
+  #
+  # Options in the global section appears on all layout configurations unless overridden
+  #
+  global:
+    # Always show the layout_bg_color option.
+    layout_bg_color: {}
+
+  layout_grid_wrapper:
+    layout_bg_color:
+      regions: false
+      layout: true
+    layout_design_classes:
+      regions: false
+      layout: true
+    layout_grid:
+      regions: false
+      layout: true
+    layout_grid_space:
+      regions: false
+      layout: true
+  layout_twocol_70_30:
+    layout_bg_color:
+      regions: false
+      layout: true
+    layout_design_classes:
+      regions: false
+      layout: true

@@ -1,0 +1,66 @@
+.card__heading {
+  @include heading-large($font-size: 1.3rem);
+  @include no-bottom;
+
+  &-link {
+    @include link;
+  }
+}
+
+.card__subheading {
+  @include heading-medium($font-size: 1rem);
+  @include no-bottom;
+
+  color: $gray;
+}
+
+.card__body {
+  margin: 0.7em 0 1em;
+}
+
+.card__link {
+  @include link;
+}
+
+.card__button {
+  @include button;
+}
+
+/* Variations */
+.card--bg {
+  background-color: $gray-lightest;
+  padding: 1em;
+}
+
+.card--white .card-inner {
+  background-color: white;
+}
+.card--gray .card-inner {
+  background-color: #f5f5f5;
+}
+
+.card-style-1 .card-inner {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 3px;
+  text-align: center;
+  img {
+    display: inline-block;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+  }
+}
+
+.card-style-2  .card-inner {
+  height: 100%;
+  max-width: 350px;
+  border-radius: 3px;
+  .field--name-field-card-image {
+    img {
+      display: block;
+    }
+  }
+  .card__content {
+    padding: 2rem;
+  }
+}

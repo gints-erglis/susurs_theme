@@ -1,0 +1,24 @@
+.block-language {
+  align-self: center;
+  ul.links {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0.3em;
+      a {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 30px;
+        color: #eee;
+        font-family: $font-narrow;
+        text-decoration: none;
+        &.is-active {
+          color: #019652;
+        }
+      }
+    }
+  }
+}

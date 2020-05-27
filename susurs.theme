@@ -1,0 +1,7 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+require_once 'functions/html.inc';

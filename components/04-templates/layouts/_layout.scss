@@ -1,0 +1,30 @@
+.paragraph--type--layout {
+  margin: 0;
+}
+
+.layout--inner {
+  @include wrapper;
+}
+
+.layout--full-width-background {
+  width: 100vw;
+  padding: 20px 0 20px 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.erl-field .layout--full-width-background {
+  width: 100%;
+  padding: 0;
+  left: auto;
+  right: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout--large-spacing {
+  padding: 6rem 0;
+}
