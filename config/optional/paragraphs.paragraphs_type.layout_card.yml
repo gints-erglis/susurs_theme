@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: layout_card
+label: 'Layout card'
+icon_uuid: null
+description: 'Card type of paragraph.'
+behavior_plugins: {  }

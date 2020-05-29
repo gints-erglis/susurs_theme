@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_color
+    - paragraphs.paragraphs_type.layout_card
+  module:
+    - options
+id: paragraph.layout_card.field_card_color
+field_name: field_card_color
+entity_type: paragraph
+bundle: layout_card
+label: 'Card color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

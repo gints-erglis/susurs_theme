@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.layout_accordion.field_accordion_content
+    - field.field.paragraph.layout_accordion.field_accordion_title
+    - paragraphs.paragraphs_type.layout_accordion
+  module:
+    - text
+id: paragraph.layout_accordion.default
+targetEntityType: paragraph
+bundle: layout_accordion
+mode: default
+content:
+  field_accordion_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_accordion_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

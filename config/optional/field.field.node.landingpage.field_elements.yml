@@ -1,0 +1,57 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_elements
+    - node.type.landingpage
+    - paragraphs.paragraphs_type.layout
+    - paragraphs.paragraphs_type.layout_accordion
+    - paragraphs.paragraphs_type.layout_card
+  module:
+    - entity_reference_layout
+id: node.landingpage.field_elements
+field_name: field_elements
+entity_type: node
+bundle: landingpage
+label: Elements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: '0'
+    target_bundles:
+      layout: layout
+      layout_accordion: layout_accordion
+      layout_card: layout_card
+    target_bundles_drag_drop:
+      erl_section:
+        weight: '5'
+        enabled: 0
+      layout:
+        enabled: '1'
+        weight: '6'
+      layout_accordion:
+        enabled: '1'
+        weight: '6'
+      layout_card:
+        enabled: '1'
+        weight: '7'
+      page_rows:
+        weight: '7'
+        enabled: 0
+      rich_text_block:
+        weight: '8'
+        enabled: 0
+    layout_bundles: layout
+    allowed_layouts:
+      'Columns: 1':
+        layout_onecol: 'One column'
+      'Columns: 2':
+        layout_twocol_70_30: 'Two column 70/30'
+      Grid:
+        layout_grid_wrapper: Grid
+field_type: entity_reference_layout_revisioned

@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landingpage.field_elements
+    - node.type.landingpage
+  module:
+    - entity_reference_layout
+    - user
+id: node.landingpage.default
+targetEntityType: node
+bundle: landingpage
+mode: default
+content:
+  field_elements:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_layout
+    region: content
+hidden:
+  langcode: true
+  links: true
