@@ -55,7 +55,7 @@
     card__extra_classes: ["card", "card-style-1"],
     card__modifiers: [card_color],
     card__heading: content.field_card_title,
-    card__body: content.field_card_content,
+    card__body: content.field_card_content.0,
     card__link__url: url,
     card__image__output_image_tag: TRUE,
     card__image__src: file_url(content.field_card_image[0]['#item'].entity.uri.value | image_style('medium')),
@@ -76,10 +76,3 @@
   {% endembed %}
 {% endif %}
 
-{#{% block paragraph %}#}
-{#  <div class="l-card {{ style }}">#}
-{#    {% block content %}#}
-{#      {{ content }}#}
-{#    {% endblock %}#}
-{#  </div>#}
-{#{% endblock paragraph %}#}

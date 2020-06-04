@@ -37,10 +37,7 @@
   {% set title_attributes = title_attributes.addClass('visually-hidden') %}
 {% endif %}
 {{ title_prefix }}
-{% include "@atoms/text/headings/_heading.twig" with {
-  "heading_level": 2,
-  "heading": label,
-} %}
+<h2{{ title_attributes.addClass('h2') }}>{{ label }}</h2>
 {{ title_suffix }}
 
 {# Menu. #}

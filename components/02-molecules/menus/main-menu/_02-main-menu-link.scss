@@ -1,8 +1,9 @@
 /* A */
 .main-menu__link {
-  color: $gray-dark;
+  color: white;
   display: block;
-  font-size: 1.2rem;
+  width: 100%;
+  font-size: 1.6rem;
   line-height: 1.5;
   padding: $space $space-triple $space $space-double;
   text-decoration: none;
@@ -16,7 +17,7 @@
     border-bottom: none;
     color: white;
     display: inline-block;
-    font-size: 1.1rem;
+    font-size: 1.6rem;
     padding: $space $space-double $space $space;
     text-transform: none;
     position: relative;

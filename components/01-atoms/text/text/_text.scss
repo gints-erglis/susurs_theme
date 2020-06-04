@@ -7,13 +7,16 @@
 
 @mixin body-copy {
   font-family: $font-body;
-  font-size: 0.9rem;
-  line-height: 1.6em;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   color: $gray;
-
   @include body-copy;
 }
 

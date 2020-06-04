@@ -1,5 +1,5 @@
 .card__heading {
-  @include heading-large($font-size: 1.3rem);
+  @include heading-large($font-size: 20px);
   @include no-bottom;
 
   &-link {
@@ -8,7 +8,7 @@
 }
 
 .card__subheading {
-  @include heading-medium($font-size: 1rem);
+  @include heading-medium($font-size: 18px);
   @include no-bottom;
 
   color: $gray;
@@ -16,6 +16,7 @@
 
 .card__body {
   margin: 0.7em 0 1em;
+  font-size: 16px;
 }
 
 .card__link {

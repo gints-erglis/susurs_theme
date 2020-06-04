@@ -1,8 +1,14 @@
 .block-language {
-  align-self: center;
-  ul.links {
-    margin: 0;
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  @include medium {
+    align-self: center;
     padding: 0;
+  }
+  ul.links {
+    margin: 0 1rem 0 0;
+    padding: 0;
+    text-align: right;
     li {
       list-style: none;
       display: inline-block;

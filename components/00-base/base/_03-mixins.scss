@@ -24,7 +24,7 @@ $outer-container-break: $small;
   $outer-container-break: $small,
   $v-margin: 0,
   $v-padding: 0,
-  $h-padding: $space,
+  $h-padding: $page-space,
   $h-padding-large: $h-padding
 ) {
   max-width: #{$container-max-width};

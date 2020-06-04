@@ -3,11 +3,6 @@ $main-menu-medium: $medium;
 
 /* Nav */
 .main-nav {
-  display: none;
-
-  @include medium {
-    display: block;
-  }
 
   &--open {
     background-color: $white;
@@ -25,7 +20,6 @@ $main-menu-medium: $medium;
 .main-menu {
   @include list-reset;
 
-  border-bottom: 1px solid;
   position: relative;
   z-index: 10;
 
@@ -89,5 +83,97 @@ $main-menu-medium: $medium;
 .main-menu--sub-2 {
   @include medium {
     display: none; /* Never shown on large screens */
+  }
+}
+
+.mobile-menu-button {
+  @include medium {
+    display: none;
+  }
+
+  margin: 1em;
+  width: 33px;
+  &:after,
+  &:before,
+  div {
+    background-color: #fff;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    transition: all .2s ease-in-out;
+  }
+}
+.mobile-menu-button.opened {
+  &:before {
+    transform: translateY(9px) rotate(135deg);
+  }
+  &:after {
+    transform: translateY(-9px) rotate(-135deg);
+  }
+  div {
+    transform: scale(0);
+  }
+}
+
+.header__menu {
+  display: none;
+  padding: 0 0 2rem 0;
+  @include medium {
+    display: flex;
+    flex-direction: initial;
+    padding: 0 0 0 2rem;
+  }
+}
+.header__menu.opened {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-left: -$page-space;
+  position: absolute;
+  top: 100%;
+  background-color: #333;
+  z-index: 15;
+  nav {
+    order: 2;
+    align-self: flex-start;
+    width: 100%;
+  }
+  .block-language {
+    order: 1;
+    width: 100%;
+  }
+  @include medium {
+    width: auto;
+    flex-direction: initial;
+    margin-left: 0;
+    position: relative;
+    background-color: transparent;
+    nav {
+      order: 1;
+      align-self: center;
+    }
+    .block-language {
+      order: 2;
+      width: auto;
+    }
+  }
+
+  ul.menu {
+    li {
+      display: block;
+      margin: 0;
+
+      a {
+        display: block;
+        font-size: 22px;
+        padding: .3em 0;
+      }
+    }
+  }
+
+  .main-menu {
+    display: block;
   }
 }
