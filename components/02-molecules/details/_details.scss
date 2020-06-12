@@ -1,0 +1,54 @@
+.details-style-1 {
+  max-width: 60em;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 2px solid #ddd;
+  summary {
+    padding: .5em .3em;
+    font-family: $font-heading;
+    font-size: 20px;
+    line-height: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: capitalize;
+    .arrow-right__icon {
+      width: 15px;
+      height: 15px;
+      margin-left: 5px;
+      margin-right: 5px;
+      transition: all .3s;
+    }
+  }
+  .content {
+    padding: 5px 20px 5px 35px;
+    > p:first-child {
+      margin-top: 0;
+    }
+  }
+  &[open] {
+    summary {
+      .arrow-right__icon {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.bg-gray,
+.bg-black,
+.bg-brand {
+  details {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 0;
+    border-radius: 3px;
+  }
+}
+// Disable the default triangle
+details summary::-webkit-details-marker {
+  display: none;
+}
+details > summary:first-of-type {
+  list-style-type: none;
+}

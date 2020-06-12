@@ -7,3 +7,5 @@ items:
     value: 'menu'
   - name: 'Twitter'
     value: 'twitter'
+  - name: 'Next'
+    value: 'next'

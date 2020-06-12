@@ -13,7 +13,11 @@
 {% set icon_base_class = icon_base_class|default('icon') %}
 {# If `directory` is defined, set the path relative for Drupal.
  # Otherwise, set the path relative to the Component Library. #}
+{% if susurs_path %}
+  {% set icon_url = '/' ~ susurs_path ~ '/dist/' %}
+{% else %}
 {% set icon_url = directory ? '/' ~ directory ~ '/dist/' %}
+{% endif %}
 
 {# IE 11 support for SVG use - remove if not needed.
 ## See also susurs.libraries.yml to remove library.

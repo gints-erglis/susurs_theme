@@ -2,6 +2,9 @@
   .layout__region--main {
     display: flex;
     flex-wrap: wrap;
+    > div {
+      flex: 1 0 100%;
+    }
   }
   &.grid-2 {
     .layout__region--main > div {
